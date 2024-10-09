@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Role extends Model
+class Mesa extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $primaryKey = 'idrole';
+    public $primaryKey = 'IdMesa';
 
-    protected $fillable = ['nombre'];
+    protected $fillable = ['NroMesa', 'Capacidad'];
 }

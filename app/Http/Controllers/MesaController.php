@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Role;
+use App\Models\Mesa;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class RoleController extends Controller
+class MesaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class RoleController extends Controller
 
     public function index(): View
     {
-        return view('roles.index', [
-            'roles' => Role::all(),
+        return view('mesas.index', [
+            'mesas' => Mesa::all(),
         ]);
     }
 
@@ -26,7 +26,7 @@ class RoleController extends Controller
      */
     public function create(): View
     {
-        return view('roles.create');
+        return view('mesas.create');
     }
 
 
@@ -36,16 +36,17 @@ class RoleController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $role = new Role;
-        $role->nombre = $request->input('nombre');
-        $role->save();
-        return redirect()->route('roles.index');
+        $mesa = new Mesa;
+        $mesa->NroMesa = $request->input('NroMesa');
+        $mesa->Capacidad = $request->input('Capacidad');
+        $mesa->save();
+        return redirect()->route('mesas.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Role $role)
+    public function show(Mesa $mesa)
     {
         //
     }
@@ -53,28 +54,28 @@ class RoleController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Role $role): View
+    public function edit(Mesa $mesa): View
     {
-        return view('roles.edit', [
-            'role' => $role,
+        return view('mesas.edit', [
+            'mesa' => $mesa,
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Role $role): RedirectResponse
+    public function update(Request $request, Mesa $mesa): RedirectResponse
     {
-        $role->update($request->only(['nombre']));
-        return redirect()->route('roles.index');
+        $mesa->update($request->only(['NroMesa', 'Capacidad']));
+        return redirect()->route('mesas.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Role $role):RedirectResponse
+    public function destroy(Mesa $mesa): RedirectResponse
     {
-        $role->delete();
-        return redirect(route('roles.index'));
+        $mesa->delete();
+        return redirect(route('mesas.index'));
     }
 }
