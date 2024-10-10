@@ -17,14 +17,18 @@
                                 <tr>
                                     <td style="flex-grow: 4">{{ $role->nombre }}</td>
                                     <td style="display: flex; justify-content: end">
-                                        <a href="{{route('roles.edit', $role)}}">
-                                            <x-primary-button class="mt-4" style="margin: 2px">{{ __('Editar') }}</x-primary-button>
-                                        </a>
-                                        <form method="POST" action="{{ route('roles.destroy', $role) }}">
-                                            @csrf
-                                            @method('delete')
-                                            <x-primary-button class="mt-4" style="margin: 2px">{{ __('Eliminar') }}</x-primary-button>
-                                        </form>
+                                        @if($role->nombre == "Administración")
+                                            <div style="height: 34px"></div>
+                                        @else
+                                            <a href="{{route('roles.edit', $role)}}">
+                                                <x-primary-button class="mt-4" style="margin: 2px">{{ __('Editar') }}</x-primary-button>
+                                            </a>
+                                            <form method="POST" action="{{ route('roles.destroy', $role) }}">
+                                                @csrf
+                                                @method('delete')
+                                                <x-primary-button class="mt-4" style="margin: 2px">{{ __('Eliminar') }}</x-primary-button>
+                                            </form>
+                                        @endif
                                     </td>
                                 </tr>
                             @endunless

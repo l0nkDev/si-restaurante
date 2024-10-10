@@ -22,7 +22,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'IdEmpleado'
     ];
+
+    protected $nullable = ['IdEmpleado'];
 
     /**
      * The attributes that should be hidden for serialization.

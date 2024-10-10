@@ -1,9 +1,7 @@
 <?php
 
-use App\Http\Controllers\ChirpController;
-use App\Http\Controllers\RoleController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\MesaController;
+use App\Http\Controllers\{ProfileController, RoleController, UsuarioController, EmpleadoController, ClienteController,
+    MesaController, ProductoController, NotaVentaController, OrdenController, OrdenaController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,16 +29,40 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('chirps', ChirpController::class)
-    ->only(['index', 'store', 'edit', 'update', 'destroy'])
+Route::resource('roles', RoleController::class)
+    ->only(['index', 'create', 'store', 'edit', 'update', 'destroy'])
     ->middleware(['auth', 'verified']);
 
-Route::resource('roles', RoleController::class)
+Route::resource('users', UsuarioController::class)
+    ->only(['index', 'create', 'store', 'edit', 'update', 'destroy'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('empleados', EmpleadoController::class)
+    ->only(['index', 'create', 'store', 'edit', 'update', 'destroy'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('clientes', ClienteController::class)
     ->only(['index', 'create', 'store', 'edit', 'update', 'destroy'])
     ->middleware(['auth', 'verified']);
 
 Route::resource('mesas', MesaController::class)
     ->only(['index', 'create', 'store', 'edit', 'update', 'destroy'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('productos', ProductoController::class)
+    ->only(['index', 'create', 'store', 'edit', 'update', 'destroy'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('nota_ventas', NotaVentaController::class)
+    ->only(['index', 'create', 'store', 'edit', 'update', 'destroy', 'show'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('ordens', OrdenController::class)
+    ->only(['index', 'create', 'store', 'edit', 'update', 'destroy', 'show'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('ordenas', OrdenaController::class)
+    ->only(['index', 'create', 'store', 'edit', 'update', 'destroy', 'show'])
     ->middleware(['auth', 'verified']);
 
 require __DIR__.'/auth.php';

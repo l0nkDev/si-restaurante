@@ -5,12 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Mesa extends Model
+class Producto extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    public $autoincrement = false;
-    public $primaryKey = 'NroMesa';
-
-    protected $fillable = ['NroMesa', 'Capacidad'];
+    public $primaryKey = 'CodProd';
+    public $fillable = ['CodProd','Precio'];
 }
