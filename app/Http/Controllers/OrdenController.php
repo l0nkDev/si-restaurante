@@ -21,7 +21,14 @@ class OrdenController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request): RedirectResponse
+    public function create(Request $request)
+    {
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request): RedirectResponse
     {
         $orden = new Orden;
         $orden->FechaHra = date('Y-m-d H:i:s');
@@ -30,14 +37,6 @@ class OrdenController extends Controller
         $orden->IdEstado = 5;
         $orden->save();
         return redirect()->route('ordens.show', $orden);
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
     }
 
     /**

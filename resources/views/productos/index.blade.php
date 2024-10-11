@@ -11,23 +11,38 @@
                 <div class="mt-6 bg-white rounded-lg divide-y">
                     <div style="height: 16px"></div>
                     <table style="width: calc(100% - 32px); margin: 16px;">
+                        <thead>
+                            <th scope="col" align="left">Nombre</th>
+                            <th scope="col" align="left">Precio</th>
+                            <th scope="col" align="left">Cantidad</th>
+                            <th scope="col" align="left">Disponible</th>
+                            <th scope="col" align="left"></th>
+                        </thead>
                         <tbody>
                         @foreach($productos as $producto)
                                 <?php $item = App\Models\Item::find($producto->CodProd) ?>
                                 <tr>
                                     <td style="flex-grow: 4">{{ $item->Nombre }}</td>
                                     <td style="flex-grow: 4">{{ $producto->Precio }}</td>
-                                    <td style="flex-grow: 4">{{ $item->Cantidad }}</td>
+                                    <td style="flex-grow: 4">{{ is_null($item->Cantidad) ? "---" : $item->Cantidad }}</td>
                                     <td style="flex-grow: 4">{{ $item->Disponible == 1 ? 'Si' : 'No' }}</td>
                                     <td style="display: flex; justify-content: end">
-                                        <a href="{{route('productos.edit', $producto)}}">
-                                            <x-primary-button class="mt-4" style="margin: 2px">{{ __('Editar') }}</x-primary-button>
-                                        </a>
-                                        <form method="POST" action="{{ route('productos.destroy', $producto) }}">
-                                            @csrf
-                                            @method('delete')
-                                            <x-primary-button class="mt-4" style="margin: 2px">{{ __('Eliminar') }}</x-primary-button>
-                                        </form>
+                                    <td>
+                                        <x-dropdown>
+                                            <x-slot name="trigger">
+                                                <button style="margin-top: 10px; margin-left: 15px">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                                                        <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                                                    </svg>
+                                                </button>
+                                            </x-slot>
+                                            <x-slot name="content">
+                                                <x-dropdown-link :href="route('productos.edit', $producto)">
+                                                    {{ __('Editar') }}
+                                                </x-dropdown-link>
+                                            </x-slot>
+                                        </x-dropdown>
+                                    </td>
                                     </td>
                                 </tr>
                         @endforeach

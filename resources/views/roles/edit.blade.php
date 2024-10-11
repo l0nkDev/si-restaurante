@@ -3,10 +3,11 @@
         <form method="POST" action="{{ route('roles.update', $role) }}">
             @csrf
             @method("patch")
-            <textarea
+            <x-input-label>Nombre:</x-input-label>
+            <x-text-input
                 name="nombre"
                 class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
-            >{{ old('nombre', $role->nombre) }}</textarea>
+            >{{ old('nombre', $role->nombre) }}</x-text-input>
             <x-input-error :messages="$errors->get('message')" class="mt-2" />
             <div class="mt-4 space-x-2">
                 <x-primary-button>{{ __('Confirmar') }}</x-primary-button>

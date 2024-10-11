@@ -12,13 +12,23 @@
                 <div class="mt-6 bg-white rounded-lg divide-y">
                     <div style="height: 16px"></div>
                     <table style="width: calc(100% - 32px); margin: 16px;">
+                        <thead>
+                            <tr>
+                                <th scope="col" align="left">Nombre</th>
+                                <th scope="col" align="left">Precio U.</th>
+                                <th scope="col" align="left">Cantidad</th>
+                                <th scope="col" align="left">Precio</th>
+                                <th scope="col" align="left"></th>
+                            </tr>
+                        </thead>
                         <tbody>
+                        <?php $total = 0.0 ?>
                         @foreach(App\Models\Ordena::all() as $ordena)
                             @if($ordena->NumOrden == $orden->NumOrden)
                             <?php
-                                error_log("Aprobado");
                                 $producto = App\Models\Producto::find($ordena->CodProd);
-                                $item = App\Models\Item::find($producto->CodProd)
+                                $item = App\Models\Item::find($producto->CodProd);
+                                $total = $total + ($producto->Precio * $ordena->Cantidad);
                             ?>
                             <tr>
                                 <td style="flex-grow: 4">{{ $item->Nombre }}</td>
@@ -39,14 +49,16 @@
                     </table>
                     <div style="height: 16px"></div>
                 </div>
-
-                <div class="mt-4 space-x-2">
-                    <a href="{{ route('nota_ventas.show', App\Models\NotaVenta::find($orden->IDVenta)) }}">
-                        <x-primary-button>{{ __('Confirmar') }}</x-primary-button>
-                    </a>
-                    <a
-                        class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
-                        href="{{ route('ordens.destroy', $orden) }}">{{ __('Cancelar') }}</a>
+                <div class="flex flex-row justify-between">
+                    <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Subtotal: {{ $total }}</h2>
+                    <div class="mt-4 space-x-2">
+                        <a href="{{ route('nota_ventas.show', App\Models\NotaVenta::find($orden->IDVenta)) }}">
+                            <x-primary-button>{{ __('Confirmar') }}</x-primary-button>
+                        </a>
+                        <a
+                            class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
+                            href="{{ route('ordens.destroy', $orden) }}">{{ __('Cancelar') }}</a>
+                    </div>
                 </div>
             </div>
         </div>

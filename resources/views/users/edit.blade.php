@@ -3,6 +3,8 @@
         <form method="POST" action="{{ route('users.update', $user) }}">
             @csrf
             @method("patch")
+
+            <x-input-label>Empleado asignado:</x-input-label>
             <select name="IdEmpleado" id="IdEmpleado">
                 <option value=""></option>
                 @foreach(App\Models\Empleado::all() as $empleado)

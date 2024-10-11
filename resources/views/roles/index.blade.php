@@ -11,9 +11,13 @@
                 <div class="mt-6 bg-white rounded-lg divide-y">
                     <div style="height: 16px"></div>
                     <table style="width: calc(100% - 32px); margin: 16px;">
+                        <thead>
+                            <th scope="col" align="left">Nombre</th>
+                            <th scope="col" align="left"></th>
+                        </thead>
                         <tbody>
                         @foreach($roles as $role)
-                            @unless( $role->nombre == "Sin rol")
+                            @unless( $role->nombre == "Invitado")
                                 <tr>
                                     <td style="flex-grow: 4">{{ $role->nombre }}</td>
                                     <td style="display: flex; justify-content: end">

@@ -5,36 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5d8e2cf-8717-4f4c-984f-70c0b42dad57" name="Changes" comment="Roles y Mesa">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Usuario.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2024_10_09_223716_create_empleados_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2024_10_10_051615_create_estado_ordens_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2024_10_10_051616_create_ordens_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/clientes/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/clientes/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/clientes/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/empleados/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/empleados/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/empleados/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/nota_ventas/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/ordenas/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/ordens/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/productos/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/productos/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/productos/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/users/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Mesa.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Mesa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_09_223720_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_03_164852_create_chirps_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_10_202600_create_chirps_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_04_221928_create_roles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_04_221928_create_roles_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_09_085855_create_mesas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_09_151956_create_mesas_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NotaVentaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NotaVentaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrdenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrdenController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps_temp_2db240b6/alpinejs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps_temp_2db240b6/alpinejs.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps_temp_2db240b6/axios.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps_temp_2db240b6/axios.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps_temp_2db240b6/chunk-PZ5AY32C.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps_temp_2db240b6/chunk-PZ5AY32C.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps_temp_2db240b6/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps_temp_68e3deb2/alpinejs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps_temp_68e3deb2/alpinejs.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps_temp_68e3deb2/axios.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps_temp_68e3deb2/axios.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps_temp_68e3deb2/chunk-PZ5AY32C.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps_temp_68e3deb2/chunk-PZ5AY32C.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps_temp_68e3deb2/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/assets/app-f8d6_Mrc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/build/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/clientes/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/clientes/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/clientes/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/clientes/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/clientes/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/clientes/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/empleados/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/empleados/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/empleados/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/empleados/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/empleados/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/empleados/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/mesas/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mesas/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/mesas/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mesas/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/mesas/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mesas/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/nota_ventas/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nota_ventas/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ordenas/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ordenas/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ordens/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ordens/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/productos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/productos/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/roles/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/roles/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/roles/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/roles/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/roles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/roles/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,20 +188,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "F:/github/si-restaurante/resources/views/ordenas",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "two.files.diff.last.used.file": "F:/github/si-restaurante/resources/views/roles/create.blade.php",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/github/si-restaurante/resources/views/ordenas&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;F:/github/si-restaurante/resources/views/roles/create.blade.php&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\github\si-restaurante\resources\views\ordenas" />
@@ -238,6 +245,8 @@
       <workItem from="1728500290063" duration="1341000" />
       <workItem from="1728501787558" duration="24119000" />
       <workItem from="1728542140658" duration="13719000" />
+      <workItem from="1728570860975" duration="2763000" />
+      <workItem from="1728630172722" duration="8532000" />
     </task>
     <task id="LOCAL-00001" summary="Roles y Mesa">
       <option name="closed" value="true" />

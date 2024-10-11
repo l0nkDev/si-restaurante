@@ -25,6 +25,13 @@ class NotaVentaController extends Controller
      */
     public function create(Request $request): RedirectResponse
     {
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request): RedirectResponse
+    {
         $nota = new NotaVenta;
         $nota->Total = 0;
         $nota->FechaHora = date('Y-m-d H:i:s');
@@ -32,14 +39,9 @@ class NotaVentaController extends Controller
         $nota->NroMesa = $request->input('NroMesa');
         $nota->IdEmpleado = Auth::user()->IdEmpleado;
         $nota->save();
+        error_log($request);
+        error_log("Siguiente^^");
         return redirect()->route('nota_ventas.show', $nota);
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
     }
 
     /**

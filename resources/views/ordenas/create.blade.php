@@ -3,16 +3,18 @@
         <form method="POST" action="{{ route('ordenas.store') }}">
             @csrf
             <input type="hidden" value="{{ $NumOrden }}" name="NumOrden">
+            <x-input-label>Producto:</x-input-label>
             <select name="CodProd" id="CodProd">
                 <option value=""></option>
                 @foreach(App\Models\Producto::all() as $producto)
                     <?php $item = App\Models\Item::find($producto->CodProd) ?>
                     <option value="{{ $producto->CodProd }}">{{ App\Models\Item::find($producto->CodProd)->Nombre }}</option>
                 @endforeach
-                <textarea
-                    name="Cantidad"
+            </select>
+                <x-input-label>Cantidad:</x-input-label>
+                <input type="number" name="Cantidad" min="0" max="{{ is_null($item->Cantidad) ? 100 : $item->Cantidad }}"
                     class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
-                ></textarea>
+                >
             <x-input-error :messages="$errors->get('message')" class="mt-2" />
             <div class="mt-4 space-x-2">
                 <x-primary-button>{{ __('Confirmar') }}</x-primary-button>

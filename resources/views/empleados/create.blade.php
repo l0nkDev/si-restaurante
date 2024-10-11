@@ -2,18 +2,21 @@
     <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8">
         <form method="POST" action="{{ route('empleados.store') }}">
             @csrf
-            <textarea
+            <x-input-label>Nombre:</x-input-label>
+            <x-text-input
                 name="Nombre"
                 class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
-            ></textarea>
-            <textarea
+            ></x-text-input>
+            <br/><x-input-label>CI:</x-input-label>
+            <x-text-input
                 name="CI"
                 class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
-            ></textarea>
-            <textarea
+            ></x-text-input>
+            <br/><x-input-label>Teléfono:</x-input-label>
+            <x-text-input
                 name="Telefono"
                 class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
-            ></textarea>
+            ></x-text-input>
             <x-input-error :messages="$errors->get('message')" class="mt-2" />
             <div class="mt-4 space-x-2">
                 <x-primary-button>{{ __('Crear') }}</x-primary-button>

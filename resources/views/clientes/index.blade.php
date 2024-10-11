@@ -11,21 +11,39 @@
                 <div class="mt-6 bg-white rounded-lg divide-y">
                     <div style="height: 16px"></div>
                     <table style="width: calc(100% - 32px); margin: 16px;">
+                        <thead>
+                            <th scope="col" align="left">Nombre</th>
+                            <th scope="col" align="left">CI</th>
+                            <th scope="col" align="left"></th>
+                        </thead>
                         <tbody>
                         @foreach($clientes as $cliente)
                                 <?php $persona = App\Models\Persona::find($cliente->IdCliente) ?>
                                 <tr>
                                     <td style="flex-grow: 4">{{ $persona->Nombre }}</td>
                                     <td style="flex-grow: 4">{{ $persona->CI }}</td>
-                                    <td style="display: flex; justify-content: end">
-                                        <a href="{{route('clientes.edit', $cliente)}}">
-                                            <x-primary-button class="mt-4" style="margin: 2px">{{ __('Editar') }}</x-primary-button>
-                                        </a>
-                                        <form method="POST" action="{{ route('clientes.destroy', $cliente) }}">
-                                            @csrf
-                                            @method('delete')
-                                            <x-primary-button class="mt-4" style="margin: 2px">{{ __('Eliminar') }}</x-primary-button>
-                                        </form>
+                                    <td>
+                                        <x-dropdown>
+                                            <x-slot name="trigger">
+                                                <button style="margin-top: 10px; margin-left: 15px">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                                                        <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                                                    </svg>
+                                                </button>
+                                            </x-slot>
+                                            <x-slot name="content">
+                                                <x-dropdown-link :href="route('clientes.edit', $cliente)">
+                                                    {{ __('Editar') }}
+                                                </x-dropdown-link>
+                                                <form method="POST" action="{{ route('clientes.destroy', $cliente) }}">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <x-dropdown-link onclick="event.preventDefault(); this.closest('form').submit();">
+                                                        {{ __('Eliminar') }}
+                                                    </x-dropdown-link>
+                                                </form>
+                                            </x-slot>
+                                        </x-dropdown>
                                     </td>
                                 </tr>
                         @endforeach

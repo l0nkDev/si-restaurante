@@ -4,18 +4,21 @@
         <form method="POST" action="{{ route('empleados.update', $empleado) }}">
             @csrf
             @method("patch")
-            <textarea
+            <x-input-label>Nombre:</x-input-label>
+            <x-text-input
                 name="Nombre"
                 class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
-            >{{ old('Nombre', $persona->Nombre) }}</textarea>
-            <textarea
+                value="{{ $persona->Nombre }}"></x-text-input>
+            <br/><x-input-label>CI:</x-input-label>
+            <x-text-input
                 name="CI"
                 class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
-            >{{ old('CI', $persona->CI) }}</textarea>
-            <textarea
+            value="{{ $persona->CI }}"></x-text-input>
+            <br/><x-input-label>Telefono:</x-input-label>
+            <x-text-input
                 name="Telefono"
                 class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
-            >{{ old('Telefono', $empleado->Telefono) }}</textarea>
+                value="{{ $empleado->Telefono }}"></x-text-input>
             <x-input-error :messages="$errors->get('message')" class="mt-2" />
             <div class="mt-4 space-x-2">
                 <x-primary-button>{{ __('Confirmar') }}</x-primary-button>

@@ -7,9 +7,10 @@
                     <a href="{{ route('mesas.index') }}">
                         <x-primary-button class="mt-4" style="margin-right: 2px">{{ __('VOLVER') }}</x-primary-button>
                     </a>
-                    <a href="{{ route('ordens.create', ['IDVenta' => $notaVenta->IDVenta]) }}">
+                    <form method="POST" action="{{ route('ordens.store', ['IDVenta' => $notaVenta->IDVenta]) }}">
+                        @csrf
                         <x-primary-button class="mt-4" style="margin-right: 2px">{{ __('NUEVA ORDEN') }}</x-primary-button>
-                    </a>
+                    </form>
                 </div>
                 <?php $total = 0.0 ?>
                 @foreach(App\Models\Orden::all() as $orden)
@@ -17,6 +18,15 @@
                         <div class="mt-6 bg-white rounded-lg divide-y">
                             <div style="height: 16px"></div>
                             <table style="width: calc(100% - 32px); margin: 16px;">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" align="left">Nombre</th>
+                                        <th scope="col" align="left">Precio U.</th>
+                                        <th scope="col" align="left">Cantidad</th>
+                                        <th scope="col" align="left">Precio</th>
+                                        <th scope="col" align="left"></th>
+                                    </tr>
+                                </thead>
                                 <tbody>
                                 @foreach(App\Models\Ordena::all() as $ordena)
                                     @if($ordena->NumOrden == $orden->NumOrden)
