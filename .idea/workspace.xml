@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5d8e2cf-8717-4f4c-984f-70c0b42dad57" name="Changes" comment="Roles y Mesa">
+      <change afterPath="$PROJECT_DIR$/resources/views/proveedors/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/proveedors/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/proveedors/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NotaVentaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NotaVentaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrdenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrdenController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProveedorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProveedorController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps_temp_2db240b6/alpinejs.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps_temp_2db240b6/alpinejs.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps_temp_2db240b6/axios.js" beforeDir="false" />
@@ -30,18 +34,22 @@
       <change beforePath="$PROJECT_DIR$/resources/views/empleados/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/empleados/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/empleados/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/empleados/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/empleados/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/empleados/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/mesas/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mesas/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/mesas/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mesas/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/mesas/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mesas/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/nota_ventas/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nota_ventas/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/ordenas/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ordenas/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/ordens/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ordens/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/productos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/productos/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/productos/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/productos/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/productos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/productos/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/roles/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/roles/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/roles/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/roles/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/roles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/roles/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +200,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/github/si-restaurante/resources/views/ordenas&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/github/si-restaurante/resources/views&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -204,8 +212,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\github\si-restaurante\resources\views\ordenas" />
       <recent name="F:\github\si-restaurante\resources\views" />
+      <recent name="F:\github\si-restaurante\resources\views\ordenas" />
       <recent name="F:\github\si-restaurante\resources\views\empleados" />
       <recent name="F:\github\si-restaurante\resources\views\usuario" />
       <recent name="F:\github\si-restaurante\resources\views\productos" />
@@ -220,8 +228,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PS-241.17890.8" />
-        <option value="bundled-php-predefined-ba97393d7c68-48a1a656d44e-com.jetbrains.php.sharedIndexes-PS-241.17890.8" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.23726.107" />
+        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.23726.107" />
       </set>
     </attachedChunks>
   </component>
@@ -246,7 +254,8 @@
       <workItem from="1728501787558" duration="24119000" />
       <workItem from="1728542140658" duration="13719000" />
       <workItem from="1728570860975" duration="2763000" />
-      <workItem from="1728630172722" duration="8532000" />
+      <workItem from="1728630172722" duration="15951000" />
+      <workItem from="1730058236354" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="Roles y Mesa">
       <option name="closed" value="true" />

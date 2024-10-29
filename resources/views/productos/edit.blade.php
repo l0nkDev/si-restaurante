@@ -4,20 +4,26 @@
         <form method="POST" action="{{ route('productos.update', $producto) }}">
             @csrf
             @method("patch")
-            <textarea
+            <x-input-label>Nombre:</x-input-label>
+            <x-text-input
                 name="Nombre"
                 class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
-            >{{ old('Nombre', $item->Nombre) }}</textarea>
-            <textarea
+                value="{{ $item->Nombre }}"></x-text-input>
+            <br/><x-input-label>Precio:</x-input-label>
+            <x-text-input
                 name="Precio"
                 class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
-            >{{ old('Pombre', $producto->Precio) }}</textarea>
-            <textarea
-                name="Cantidad"
+                value="{{ $producto->Precio }}"></x-text-input>
+            <br/><x-input-label>Cantidad:</x-input-label>
+            <input
+                name="Cantidad" type="number"
                 class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
-            >{{ old('Cantidad', $item->Cantidad) }}</textarea>
-            <input type="checkbox" id="Disponible" name="Disponible">
-            <label for="Disponible" class="text-gray-900 dark:text-white"> Disponible</label><br>
+                value="{{ $item->Cantidad }}">
+            <br/>
+            <div class="flex flex-row">
+                <x-input-label>Disponible:</x-input-label>
+                <input type="checkbox" id="Disponible" name="Disponible">
+            </div>
             <x-input-error :messages="$errors->get('message')" class="mt-2" />
             <div class="mt-4 space-x-2">
                 <x-primary-button>{{ __('Confirmar') }}</x-primary-button>
