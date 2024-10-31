@@ -21,7 +21,8 @@ return new class extends Migration
         $pre = new EstadoOrden(['Nombre' => 'Preparando']);
         $lis = new EstadoOrden(['Nombre' => 'Listo']);
         $ent = new EstadoOrden(['Nombre' => 'Entregado']);
-        $tom->save(); $pre->save(); $lis->save(); $ent->save();
+        $and = new EstadoOrden(['Nombre' => 'Tomando']);
+        $tom->save(); $pre->save(); $lis->save(); $ent->save();  $and->save();
     }
 
     /**

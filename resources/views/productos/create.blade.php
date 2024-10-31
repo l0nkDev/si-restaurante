@@ -16,7 +16,7 @@
             <x-text-input
                 name="Cantidad" type="number" min="0" max="100"
                 class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
-            ><br/>
+            ></x-text-input><br/>
             <div class="flex flex-row">
                 <x-input-label>Disponible:</x-input-label>
                 <input type="checkbox" id="Disponible" name="Disponible"><br>

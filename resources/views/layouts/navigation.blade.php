@@ -33,6 +33,9 @@
                     <x-nav-link :href="route('proveedors.index')" :active="request()->routeIs('proveedors.index')">
                         {{ __('Proveedores') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('menu.index')" :active="request()->routeIs('menu.index')">
+                        {{ __('Menú') }}
+                    </x-nav-link>
                 </div>
             </div>
 
