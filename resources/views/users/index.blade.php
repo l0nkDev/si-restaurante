@@ -3,7 +3,15 @@
         <div class="mt-6">
             <div style="margin: 20px;">
                 <div class="flex flex-row justify-between">
-                    <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Administración de usuarios</h2>
+                    <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Usuarios</h2>
+                    <div>
+                        <a href="{{ route('empleados.index') }}">
+                            <x-primary-button class="mt-4" style="margin-right: 2px">{{ __('EMPLEADOS') }}</x-primary-button>
+                        </a>
+                        <a href="{{ route('roles.index') }}">
+                            <x-primary-button class="mt-4" style="margin-right: 2px">{{ __('ROLES') }}</x-primary-button>
+                        </a>
+                    </div>
                 </div>
                 <div class="mt-6 bg-white rounded-lg divide-y">
                     <div style="height: 16px"></div>
@@ -45,6 +53,14 @@
                         </tbody>
                     </table>
                     <div style="height: 16px"></div>
+                </div>
+                <div>
+                    <a href="{{ route('menu.index') }}">
+                        <x-primary-button class="mt-4" style="margin-right: 2px">{{ __('GESTIONAR MENU') }}</x-primary-button>
+                    </a>
+                    <a href="{{ route('bitacora.index') }}">
+                        <x-primary-button class="mt-4" style="margin-right: 2px">{{ __('VER BITÁCORA') }}</x-primary-button>
+                    </a>
                 </div>
             </div>
         </div>

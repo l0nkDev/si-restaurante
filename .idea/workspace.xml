@@ -202,7 +202,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "F:/github/si-restaurante/resources/views/bitacoras",
+    "last_opened_file_path": "F:/github/si-restaurante/resources/views/espacio",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -214,11 +214,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\github\si-restaurante\resources\views\espacio" />
       <recent name="F:\github\si-restaurante\resources\views\bitacoras" />
       <recent name="F:\github\si-restaurante\resources\views" />
       <recent name="F:\github\si-restaurante\resources\views\ordenas" />
       <recent name="F:\github\si-restaurante\resources\views\empleados" />
-      <recent name="F:\github\si-restaurante\resources\views\usuario" />
     </key>
   </component>
   <component name="RunManager">
@@ -260,7 +260,7 @@
       <workItem from="1730058236354" duration="7000" />
       <workItem from="1730277168947" duration="2440000" />
       <workItem from="1730379796969" duration="4279000" />
-      <workItem from="1730438283193" duration="8239000" />
+      <workItem from="1730438283193" duration="14652000" />
     </task>
     <task id="LOCAL-00001" summary="Roles y Mesa">
       <option name="closed" value="true" />

@@ -37,7 +37,7 @@ class MenuController extends Controller
     {
         $menu = new Menu();
         $menu->CodProd = $request->input('CodProd');
-
+        
         $bitacora = new Bitacora;
         $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];
         $bitacora->Username = Auth::user()->name;

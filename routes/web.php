@@ -3,7 +3,7 @@
 use App\Http\Controllers\{
     ProfileController, RoleController, UsuarioController, EmpleadoController, ClienteController,
     MesaController, ProductoController, NotaVentaController, OrdenController, OrdenaController, ProveedorController,
-    MenuController, BitacoraController
+    MenuController, BitacoraController, EspacioController
     };
 use Illuminate\Support\Facades\Route;
 
@@ -78,6 +78,10 @@ Route::resource('menu', MenuController::class)
 
 Route::resource('bitacora', BitacoraController::class)
     ->only(['index', 'create', 'store', 'edit', 'update', 'destroy', 'show'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('espacio', EspacioController::class)
+    ->only(['index'])
     ->middleware(['auth', 'verified']);
 
 require __DIR__.'/auth.php';

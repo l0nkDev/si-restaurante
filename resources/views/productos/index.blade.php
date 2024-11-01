@@ -7,6 +7,9 @@
                     <form method="GET" action="{{ route('productos.create') }}">
                         <x-primary-button class="mt-4" style="margin-right: 2px">{{ __('NUEVO PRODUCTO') }}</x-primary-button>
                     </form>
+                    <a href="{{ route('proveedors.index') }}">
+                        <x-primary-button class="mt-4" style="margin-right: 2px">{{ __('PROVEEDORES') }}</x-primary-button>
+                    </a>
                 </div>
                 <div class="mt-6 bg-white rounded-lg divide-y">
                     <div style="height: 16px"></div>

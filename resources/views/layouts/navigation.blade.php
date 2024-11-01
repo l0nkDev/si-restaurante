@@ -1,5 +1,6 @@
 <nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
     <!-- Primary Navigation Menu -->
+    <?php $rol = Illuminate\Support\Facades\Auth::user()->idrole; ?>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
@@ -12,33 +13,26 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('roles.index')" :active="request()->routeIs('roles.index')">
-                        {{ __('Roles') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">
-                        {{ __('Usuarios') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('empleados.index')" :active="request()->routeIs('empleados.index')">
-                        {{ __('Empleados') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('clientes.index')" :active="request()->routeIs('clientes.index')">
-                        {{ __('Clientes') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('mesas.index')" :active="request()->routeIs('mesas.index')">
-                        {{ __('Mesas') }}
-                    </x-nav-link>
+                    @if($rol == 2)
                     <x-nav-link :href="route('productos.index')" :active="request()->routeIs('productos.index')">
-                        {{ __('Productos') }}
+                        {{ __('Inventario') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('proveedors.index')" :active="request()->routeIs('proveedors.index')">
-                        {{ __('Proveedores') }}
+                    @endif
+                    @if($rol == 2 or $rol == 4)
+                    <x-nav-link :href="route('mesas.index')" :active="request()->routeIs('mesas.index')">
+                        {{ __('Lugar') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('menu.index')" :active="request()->routeIs('menu.index')">
-                        {{ __('Menú') }}
+                        @endif
+                        @if($rol == 2 or $rol == 3)
+                    <x-nav-link :href="route('clientes.index')" :active="request()->routeIs('clientes.index')">
+                        {{ __('Caja') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('bitacora.index')" :active="request()->routeIs('bitacora.index')">
-                        {{ __('Bitácora') }}
+                        @endif
+                        @if($rol == 2)
+                    <x-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">
+                        {{ __('Administración') }}
                     </x-nav-link>
+                        @endif
                 </div>
             </div>
 
@@ -91,33 +85,26 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('roles.index')" :active="request()->routeIs('roles.index')">
-                {{ __('Roles') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">
-                {{ __('Usuarios') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('empleados.index')" :active="request()->routeIs('empleados.index')">
-                {{ __('Empleados') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('clientes.index')" :active="request()->routeIs('clientes.index')">
-                {{ __('Clientes') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('mesas.index')" :active="request()->routeIs('mesas.index')">
-                {{ __('Mesas') }}
-            </x-responsive-nav-link>
+            @if($rol == 2)
             <x-responsive-nav-link :href="route('productos.index')" :active="request()->routeIs('productos.index')">
-                {{ __('Productos') }}
+                {{ __('Inventario') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('proveedors.index')" :active="request()->routeIs('proveedors.index')">
-                {{ __('Proveedores') }}
+            @endif
+            @if($rol == 2 or $rol == 4)
+            <x-responsive-nav-link :href="route('mesas.index')" :active="request()->routeIs('mesas.index')">
+                {{ __('Lugar') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('menu.index')" :active="request()->routeIs('menu.index')">
-                {{ __('Menú') }}
+                @endif
+                @if($rol == 2 or $rol == 3)
+            <x-responsive-nav-link :href="route('clientes.index')" :active="request()->routeIs('clientes.index')">
+                {{ __('Caja') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('bitacora.index')" :active="request()->routeIs('bitacora.index')">
-                {{ __('Bitácora') }}
+                @endif
+                @if($rol == 2)
+            <x-responsive-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">
+                {{ __('Administración') }}
             </x-responsive-nav-link>
+                @endif
         </div>
 
         <!-- Responsive Settings Options -->
