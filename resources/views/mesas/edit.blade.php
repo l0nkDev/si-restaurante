@@ -8,7 +8,7 @@
                 name="NroMesa"
                 class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
                 value="{{ $mesa->NroMesa }}">
-            <br/><x-input-label>Numero de mesa:</x-input-label>
+            <br/><x-input-label>Capacidad:</x-input-label>
             <input
                 name="Capacidad"
                 class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"

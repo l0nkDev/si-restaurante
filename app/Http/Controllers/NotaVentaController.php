@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bitacora;
 use App\Models\NotaVenta;
 use App\Models\Mesa;
 use App\Models\Empleado;
@@ -23,8 +24,9 @@ class NotaVentaController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request): RedirectResponse
+    public function create(Request $request)
     {
+        //
     }
 
     /**
@@ -38,9 +40,16 @@ class NotaVentaController extends Controller
         $nota->FuePagado = 0;
         $nota->NroMesa = $request->input('NroMesa');
         $nota->IdEmpleado = Auth::user()->IdEmpleado;
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'I';
+        $bitacora->Table = 'nota_ventas';
         $nota->save();
-        error_log($request);
-        error_log("Siguiente^^");
+        $bitacora->Row = "" . $nota->IDVenta . " (Mesa " . $nota->NroMesa . ")";
+        $bitacora->save();
+
         return redirect()->route('nota_ventas.show', $nota);
     }
 
@@ -69,7 +78,16 @@ class NotaVentaController extends Controller
     {
         $notaVenta->Total = $request->input('total');
         $notaVenta->FuePagado = 1;
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'E';
+        $bitacora->Table = 'nota_ventas';
+        $bitacora->Row = "" . $notaVenta->IDVenta . " (Mesa " . $notaVenta->NroMesa . ")";
+
         $notaVenta->save();
+        $bitacora->save();
         return redirect()->route('mesas.index');
     }
 

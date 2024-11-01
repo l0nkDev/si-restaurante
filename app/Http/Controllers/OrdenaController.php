@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bitacora;
 use App\Models\Ordena;
 use App\Models\Orden;
 use App\Models\Producto;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class OrdenaController extends Controller
@@ -37,7 +39,16 @@ class OrdenaController extends Controller
         $ordena->CodProd = $request->input('CodProd');
         $ordena->NumOrden = $request->input('NumOrden');
         $ordena->SubTotal = Producto::find($ordena->CodProd)->Precio * $ordena->Cantidad;
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'I';
+        $bitacora->Table = 'Ordenas';
+
         $ordena->save();
+        $bitacora->Row = "" . $ordena->NroOrdena . " (Orden " . $ordena->NumOrden . ")";
+        $bitacora->save();
         return redirect()->route('ordens.show', Orden::find($ordena->NumOrden));
     }
 
@@ -71,7 +82,16 @@ class OrdenaController extends Controller
     public function destroy(Ordena $ordena): RedirectResponse
     {
         $tmp = $ordena->NumOrden;
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'D';
+        $bitacora->Table = 'Ordenas';
+        $bitacora->Row = "" . $ordena->NroOrdena . " (Orden " . $ordena->NumOrden . ")";
+
         $ordena->delete();
+        $bitacora->save();
         return redirect()->route('ordens.show', Orden::find($tmp));
     }
 }

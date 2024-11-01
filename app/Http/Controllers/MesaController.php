@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bitacora;
 use App\Models\Mesa;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -39,7 +41,16 @@ class MesaController extends Controller
         $mesa = new Mesa;
         $mesa->NroMesa = $request->input('NroMesa');
         $mesa->Capacidad = $request->input('Capacidad');
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'I';
+        $bitacora->Table = 'Mesas';
+        $bitacora->Row = $mesa->NroMesa;
+
         $mesa->save();
+        $bitacora->save();
         return redirect()->route('mesas.index');
     }
 
@@ -66,7 +77,16 @@ class MesaController extends Controller
      */
     public function update(Request $request, Mesa $mesa): RedirectResponse
     {
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'E';
+        $bitacora->Table = 'Mesas';
+        $bitacora->Row = $mesa->NroMesa;
+
         $mesa->update($request->only(['NroMesa', 'Capacidad']));
+        $bitacora->save();
         return redirect()->route('mesas.index');
     }
 
@@ -75,7 +95,16 @@ class MesaController extends Controller
      */
     public function destroy(Mesa $mesa): RedirectResponse
     {
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'D';
+        $bitacora->Table = 'Mesas';
+        $bitacora->Row = $mesa->NroMesa;
+
         $mesa->delete();
+        $bitacora->save();
         return redirect(route('mesas.index'));
     }
 }

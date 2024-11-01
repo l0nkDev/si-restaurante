@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bitacora;
 use App\Models\Orden;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -35,7 +36,16 @@ class OrdenController extends Controller
         $orden->IDVenta = $request->input('IDVenta');
         $orden->IdEmpleado = Auth::user()->IdEmpleado;
         $orden->IdEstado = 5;
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'I';
+        $bitacora->Table = 'Ordens';
+
         $orden->save();
+        $bitacora->Row = "" . $orden->NumOrden . " (Venta " . $orden->IDVenta . ")";
+        $bitacora->save();
         return redirect()->route('ordens.show', $orden);
     }
 

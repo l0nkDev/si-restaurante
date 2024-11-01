@@ -36,6 +36,9 @@
                     <x-nav-link :href="route('menu.index')" :active="request()->routeIs('menu.index')">
                         {{ __('Menú') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('bitacora.index')" :active="request()->routeIs('bitacora.index')">
+                        {{ __('Bitácora') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -108,6 +111,12 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('proveedors.index')" :active="request()->routeIs('proveedors.index')">
                 {{ __('Proveedores') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('menu.index')" :active="request()->routeIs('menu.index')">
+                {{ __('Menú') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('bitacora.index')" :active="request()->routeIs('bitacora.index')">
+                {{ __('Bitácora') }}
             </x-responsive-nav-link>
         </div>
 

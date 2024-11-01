@@ -3,7 +3,7 @@
 use App\Http\Controllers\{
     ProfileController, RoleController, UsuarioController, EmpleadoController, ClienteController,
     MesaController, ProductoController, NotaVentaController, OrdenController, OrdenaController, ProveedorController,
-    MenuController
+    MenuController, BitacoraController
     };
 use Illuminate\Support\Facades\Route;
 
@@ -73,6 +73,10 @@ Route::resource('proveedors', ProveedorController::class)
     ->middleware(['auth', 'verified']);
 
 Route::resource('menu', MenuController::class)
+    ->only(['index', 'create', 'store', 'edit', 'update', 'destroy', 'show'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('bitacora', BitacoraController::class)
     ->only(['index', 'create', 'store', 'edit', 'update', 'destroy', 'show'])
     ->middleware(['auth', 'verified']);
 

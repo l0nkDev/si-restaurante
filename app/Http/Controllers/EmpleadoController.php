@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bitacora;
 use App\Models\Empleado;
 use App\Models\Persona;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class EmpleadoController extends Controller
@@ -41,6 +43,15 @@ class EmpleadoController extends Controller
         $empleado->Telefono = $request->input('Telefono');
         $empleado->IdEmpleado = $persona->IdPersona;
         $empleado->save();
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'I';
+        $bitacora->Table = 'Empleados';
+        $bitacora->Row = $persona->Nombre;
+        $bitacora->save();
+
         return redirect()->route('empleados.index');
 
     }
@@ -74,6 +85,15 @@ class EmpleadoController extends Controller
         $persona->save();
         $empleado->Telefono = $request->input('Telefono');
         $empleado->save();
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'E';
+        $bitacora->Table = 'Empleados';
+        $bitacora->Row = $persona->Nombre;
+        $bitacora->save();
+
         return redirect()->route('empleados.index');
     }
 
@@ -82,9 +102,18 @@ class EmpleadoController extends Controller
      */
     public function destroy(Empleado $empleado)
     {
-        $tmp = $empleado->IdEmpleado;
+        $persona = Persona::find($empleado->IdEmpleado);
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'D';
+        $bitacora->Table = 'Empleados';
+        $bitacora->Row = $persona->Nombre;
+
         $empleado->delete();
-        Persona::find($tmp)->delete();
+        $persona ->delete();
+        $bitacora->save();
         return redirect(route('empleados.index'));
     }
 }

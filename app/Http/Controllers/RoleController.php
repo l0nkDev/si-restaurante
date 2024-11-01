@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bitacora;
 use App\Models\Role;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -39,6 +41,15 @@ class RoleController extends Controller
         $role = new Role;
         $role->nombre = $request->input('nombre');
         $role->save();
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];;
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'I';
+        $bitacora->Table = 'Roles';
+        $bitacora->Row = $role->nombre;
+        $bitacora->save();
+
         return redirect()->route('roles.index');
     }
 
@@ -65,6 +76,15 @@ class RoleController extends Controller
      */
     public function update(Request $request, Role $role): RedirectResponse
     {
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];;
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'E';
+        $bitacora->Table = 'Roles';
+        $bitacora->Row = $request->input("nombre");
+        $bitacora->save();
+
         $role->update($request->only(['nombre']));
         return redirect()->route('roles.index');
     }
@@ -74,6 +94,13 @@ class RoleController extends Controller
      */
     public function destroy(Role $role):RedirectResponse
     {
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];;
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'D';
+        $bitacora->Table = 'Roles';
+        $bitacora->Row = $role->nombre;
+        $bitacora->save();
         $role->delete();
         return redirect(route('roles.index'));
     }

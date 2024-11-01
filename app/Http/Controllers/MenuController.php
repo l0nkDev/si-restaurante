@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bitacora;
 use App\Models\Menu;
 use App\Models\Item;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class MenuController extends Controller
@@ -35,7 +37,17 @@ class MenuController extends Controller
     {
         $menu = new Menu();
         $menu->CodProd = $request->input('CodProd');
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'I';
+        $bitacora->Table = 'Menu';
+        $item = Item::find($menu->CodProd);
+        $bitacora->Row = $item->Nombre;
         $menu->save();
+        $bitacora->save();
+
         return redirect()->route('menu.index');
     }
 
@@ -54,7 +66,16 @@ class MenuController extends Controller
     {
         $item = Item::find($menu->CodProd);
         $item->Disponible = $item->Disponible == 0 ? 1 : 0;
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'E';
+        $bitacora->Table = 'Menu';
+        $bitacora->Row = $item->Nombre;
         $item->save();
+        $bitacora->save();
+
         return redirect()->route('menu.index');
     }
 
@@ -71,7 +92,18 @@ class MenuController extends Controller
      */
     public function destroy(Menu $menu): RedirectResponse
     {
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'D';
+        $bitacora->Table = 'Menu';
+        $item = Item::find($menu->CodProd);
+        $bitacora->Row = $item->Nombre;
+
         $menu->delete();
+        $bitacora->save();
+
         return redirect()->route('menu.index');
     }
 }

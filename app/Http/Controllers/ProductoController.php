@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bitacora;
 use App\Models\Producto;
 use App\Models\Item;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class ProductoController extends Controller
@@ -42,6 +44,15 @@ class ProductoController extends Controller
         $producto->CodProd = $item->CodItem;
         $producto->Precio = $request->input('Precio');
         $producto->save();
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];;
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'I';
+        $bitacora->Table = 'Productos';
+        $bitacora->Row = $item->Nombre;
+        $bitacora->save();
+
         return redirect()->route('productos.index');
     }
 
@@ -74,6 +85,15 @@ class ProductoController extends Controller
         $item->update($request->only(['Nombre', 'Cantidad']));
         $item->Disponible = $disp;
         $item->save();
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];;
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'E';
+        $bitacora->Table = 'Productos';
+        $bitacora->Row = $item->Nombre;
+        $bitacora->save();
+
         return redirect()->route('productos.index');
     }
 
@@ -82,9 +102,18 @@ class ProductoController extends Controller
      */
     public function destroy(Producto $producto)
     {
-        $tmp = $producto->IdProd;
+        $item = Item::find($producto->IdProd);
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];;
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'D';
+        $bitacora->Table = 'Productos';
+        $bitacora->Row = $item->Nombre;
+        $bitacora->save();
+
         $producto->delete();
-        Item::find($tmp)->delete();
+        $item->delete();
         return redirect(route('productos.index'));
     }
 }

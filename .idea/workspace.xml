@@ -5,15 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5d8e2cf-8717-4f4c-984f-70c0b42dad57" name="Changes" comment="Roles y Mesa">
-      <change afterPath="$PROJECT_DIR$/resources/views/menu/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/menu/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/bitacoras/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthenticatedSessionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthenticatedSessionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClienteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClienteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmpleadoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmpleadoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MenuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MenuController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MesaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MesaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NotaVentaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NotaVentaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrdenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrdenController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrdenaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrdenaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProveedorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProveedorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Usuario.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_09_223716_create_empleados_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_09_223716_create_empleados_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_10_051615_create_estado_ordens_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_10_051615_create_estado_ordens_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/@esbuild/linux-x64/bin/esbuild" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@esbuild/linux-x64/bin/esbuild" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/esbuild/bin/esbuild" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/esbuild/bin/esbuild" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/laravel-vite-plugin/bin/clean.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/laravel-vite-plugin/bin/clean.js" afterDir="false" />
@@ -26,6 +34,8 @@
       <change beforePath="$PROJECT_DIR$/resources/views/empleados/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/empleados/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/empleados/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/empleados/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menu/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menu/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menu/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menu/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/mesas/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mesas/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/mesas/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mesas/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/mesas/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mesas/index.blade.php" afterDir="false" />
@@ -188,27 +198,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/github/si-restaurante/resources/views&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;F:/github/si-restaurante/resources/views/roles/create.blade.php&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "F:/github/si-restaurante/resources/views/bitacoras",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "two.files.diff.last.used.file": "F:/github/si-restaurante/resources/views/roles/create.blade.php",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\github\si-restaurante\resources\views\bitacoras" />
       <recent name="F:\github\si-restaurante\resources\views" />
       <recent name="F:\github\si-restaurante\resources\views\ordenas" />
       <recent name="F:\github\si-restaurante\resources\views\empleados" />
       <recent name="F:\github\si-restaurante\resources\views\usuario" />
-      <recent name="F:\github\si-restaurante\resources\views\productos" />
     </key>
   </component>
   <component name="RunManager">
@@ -250,6 +260,7 @@
       <workItem from="1730058236354" duration="7000" />
       <workItem from="1730277168947" duration="2440000" />
       <workItem from="1730379796969" duration="4279000" />
+      <workItem from="1730438283193" duration="8239000" />
     </task>
     <task id="LOCAL-00001" summary="Roles y Mesa">
       <option name="closed" value="true" />

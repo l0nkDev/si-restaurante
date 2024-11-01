@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bitacora;
 use App\Models\Proveedor;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class ProveedorController extends Controller
@@ -37,6 +39,16 @@ class ProveedorController extends Controller
         $proveedor->Ubicacion = $request->input('Ubicacion');
         $proveedor->Telefono = $request->input('Telefono');
         $proveedor->save();
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];;
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'I';
+        $bitacora->Table = 'Proveedors';
+        $bitacora->Row = $proveedor->Descripcion;
+
+        $bitacora->save();
+
         return redirect()->route('proveedors.index');
     }
 
@@ -67,6 +79,15 @@ class ProveedorController extends Controller
         $proveedor->Ubicacion = $request->input('Ubicacion');
         $proveedor->Telefono = $request->input('Telefono');
         $proveedor->save();
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];;
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'E';
+        $bitacora->Table = 'Proveedors';
+        $bitacora->Row = $proveedor->Descripcion;
+        $bitacora->save();
+
         return redirect()->route('proveedors.index');
     }
 
@@ -75,6 +96,14 @@ class ProveedorController extends Controller
      */
     public function destroy(Proveedor $proveedor): RedirectResponse
     {
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];;
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'D';
+        $bitacora->Table = 'Proveedors';
+        $bitacora->Row = $proveedor->Descripcion;
+        $bitacora->save();
         $proveedor->delete();
         return redirect()->route('proveedors.index');
     }

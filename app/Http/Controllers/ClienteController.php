@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bitacora;
 use App\Models\Cliente;
 use App\Models\Persona;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class ClienteController extends Controller
@@ -40,6 +42,15 @@ class ClienteController extends Controller
         $cliente = new Cliente;
         $cliente->IdCliente = $persona->IdPersona;
         $cliente->save();
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];;
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'I';
+        $bitacora->Table = 'Clientes';
+        $bitacora->Row = $persona->Nombre;
+        $bitacora->save();
+
         return redirect()->route('clientes.index');
     }
 
@@ -70,6 +81,15 @@ class ClienteController extends Controller
         $persona->Nombre = $request->input('Nombre');
         $persona->CI = $request->input('CI');
         $persona->save();
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];;
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'E';
+        $bitacora->Table = 'Clientes';
+        $bitacora->Row = $persona->Nombre;
+        $bitacora->save();
+
         return redirect()->route('clientes.index');
     }
 
@@ -78,9 +98,19 @@ class ClienteController extends Controller
      */
     public function destroy(Cliente $cliente): RedirectResponse
     {
-        $tmp = $cliente->IdCliente;
+        $persona = Persona::find($cliente->IdCliente);
+
+        $bitacora = new Bitacora;
+        $bitacora->IP = $_SERVER['HTTP_X_FORWARDED_FOR'];;
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'D';
+        $bitacora->Table = 'Clientes';
+        $bitacora->Row = $persona->Nombre;
+
         $cliente->delete();
-        Persona::find($tmp)->delete();
+        $persona->delete();
+        $bitacora->save();
+
         return redirect()->route('clientes.index');
     }
 }
