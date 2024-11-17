@@ -1,10 +1,19 @@
 <?php
 
-use App\Http\Controllers\{
-    ProfileController, RoleController, UsuarioController, EmpleadoController, ClienteController,
-    MesaController, ProductoController, NotaVentaController, OrdenController, OrdenaController, ProveedorController,
-    MenuController, BitacoraController, EspacioController
-    };
+use App\Http\Controllers\{Admin\BitacoraController,
+    Admin\EmpleadoController,
+    Admin\MenuController,
+    Admin\RoleController,
+    Admin\UsuarioController,
+    Caja\ClienteController,
+    Inventario\ProductoController,
+    Inventario\ProveedorController,
+    Lugar\EspacioController,
+    Lugar\MesaController,
+    Lugar\NotaVentaController,
+    Lugar\OrdenaController,
+    Lugar\OrdenController,
+    ProfileController};
 use Illuminate\Support\Facades\Route;
 
 /*

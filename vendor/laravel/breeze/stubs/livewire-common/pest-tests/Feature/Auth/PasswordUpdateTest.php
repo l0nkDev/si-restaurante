@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\Auth;
 
-use App\Models\User;
+use App\Models\Admin\User;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Volt\Volt;
 
