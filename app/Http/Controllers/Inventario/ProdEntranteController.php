@@ -49,7 +49,7 @@ class ProdEntranteController extends Controller
 
         $bitacora->Row = "" . $entrada->NroCompra . " (Compra " . $entrada->IdCompra . ")";
         $bitacora->save();
-        return redirect()->route('nota_compra.show', $notacompra);
+        return redirect()->route('nota_compra.show', NotaCompra::find($entrada->IdCompra));
     }
 
     /**
