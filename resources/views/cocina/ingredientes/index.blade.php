@@ -93,6 +93,11 @@
                     </table>
                     <div style="height: 16px"></div>
                 </div>
+
+                <a href="{{ route('salida_cocina.index') }}">
+                    <x-primary-button class="mt-4"
+                                      style="margin-right: 2px">{{ __('SALIDAS DE COCINA') }}</x-primary-button>
+                </a>
             </div>
         </div>
 

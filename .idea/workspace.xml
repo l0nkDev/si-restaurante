@@ -205,7 +205,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "F:/github/si-restaurante/resources/views/inventario/nota_compras",
+    "last_opened_file_path": "F:/github/si-restaurante/resources/views/cocina",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -222,11 +222,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\github\si-restaurante\resources\views\cocina" />
       <recent name="F:\github\si-restaurante\resources\views\inventario\nota_compras" />
       <recent name="F:\github\si-restaurante\resources\views\inventario" />
       <recent name="F:\github\si-restaurante\resources\views\cocina\contienes" />
       <recent name="F:\github\si-restaurante\database\migrations\cocina" />
-      <recent name="F:\github\si-restaurante\resources\views\cocina" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\github\si-restaurante\database\migrations\inventario" />
@@ -280,7 +280,7 @@
       <workItem from="1731821389686" duration="3958000" />
       <workItem from="1731825414057" duration="329000" />
       <workItem from="1731962783267" duration="2604000" />
-      <workItem from="1732215802506" duration="24987000" />
+      <workItem from="1732215802506" duration="29366000" />
     </task>
     <task id="LOCAL-00001" summary="Roles y Mesa">
       <option name="closed" value="true" />

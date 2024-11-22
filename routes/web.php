@@ -9,6 +9,7 @@ use App\Http\Controllers\{Admin\BitacoraController,
     Caja\IngresosTotalesController,
     Cocina\ContieneController,
     Cocina\IngredienteController,
+    Cocina\SalidaCocinaController,
     Inventario\NotaCompraController,
     Inventario\ProdEntranteController,
     Inventario\ProductoController,
@@ -116,6 +117,10 @@ Route::resource('nota_compra', NotaCompraController::class)
 
 Route::resource('producto_entrante', ProdEntranteController::class)
     ->only(['create', 'edit', 'store', 'update', 'destroy', 'show'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('salida_cocina', SalidaCocinaController::class)
+    ->only(['index', 'store', 'create'])
     ->middleware(['auth', 'verified']);
 
 require __DIR__.'/auth.php';
