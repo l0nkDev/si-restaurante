@@ -5,176 +5,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5d8e2cf-8717-4f4c-984f-70c0b42dad57" name="Changes" comment="Roles y Mesa">
-      <change afterPath="$PROJECT_DIR$/resources/views/caja/clientes/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/caja/clientes/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/inventario/productos/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/inventario/productos/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/lugar/ordens/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Cocina/ContieneController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Cocina/Contiene.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/cocina/2024_11_18_215016_create_contienes_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/caja/ingresos/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/cocina/contienes/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/cocina/ingredientes/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/cocina/ingredientes/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/inventario/nota_compras/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/inventario/nota_compras/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/inventario/prod_entrantes/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthenticatedSessionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Auth/AuthenticatedSessionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ConfirmablePasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Auth/ConfirmablePasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/EmailVerificationNotificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Auth/EmailVerificationNotificationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/EmailVerificationPromptController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Auth/EmailVerificationPromptController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/NewPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Auth/NewPasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Auth/PasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordResetLinkController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Auth/PasswordResetLinkController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisteredUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Auth/RegisteredUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerifyEmailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Auth/VerifyEmailController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BitacoraController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/BitacoraController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClienteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Caja/ClienteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmpleadoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/EmpleadoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EspacioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Lugar/EspacioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstadoOrdenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Lugar/EstadoOrdenController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ItemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Inventario/ItemController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MenuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MenuController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MesaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Lugar/MesaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NotaVentaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Lugar/NotaVentaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrdenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Lugar/OrdenController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrdenaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Lugar/OrdenaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PersonaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Inventario/ProductoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProveedorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Inventario/ProveedorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/RoleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsuarioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ProfileUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ProfileUpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/SendChirpCreatedNotifications.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/SendChirpCreatedNotifications.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Bitacora.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin/Bitacora.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Chirp.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Chirp.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Cliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Caja/Cliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Empleado.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin/Empleado.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/EstadoOrden.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Lugar/EstadoOrden.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Inventario/Item.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin/Menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Mesa.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Lugar/Mesa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/NotaVenta.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Lugar/NotaVenta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Orden.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Lugar/Orden.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Ordena.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Lugar/Ordena.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Persona.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin/Persona.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Producto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Inventario/Producto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Proveedor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Inventario/Proveedor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin/Role.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin/Usuario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/ChirpPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/ChirpPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_reset_tokens_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/admin/2014_10_12_100000_create_password_reset_tokens_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/admin/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/admin/2019_12_14_000001_create_personal_access_tokens_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_04_221928_create_roles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/admin/2024_10_04_221928_create_roles_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_09_151956_create_mesas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/lugar/2024_10_09_151956_create_mesas_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_09_203608_create_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/inventario/2024_10_09_203608_create_items_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_09_223710_create_personas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/admin/2024_10_09_223710_create_personas_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_09_223716_create_empleados_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/admin/2024_10_09_223716_create_empleados_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_09_223720_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/admin/2024_10_09_223720_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_10_001536_create_clientes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/caja/2024_10_10_001536_create_clientes_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_10_042615_create_productos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/inventario/2024_10_10_042615_create_productos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_10_051550_create_nota_ventas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/lugar/2024_10_10_051550_create_nota_ventas_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_10_051615_create_estado_ordens_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/lugar/2024_11_17_051615_create_estado_ordens_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_10_051616_create_ordens_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/lugar/2024_10_10_051616_create_ordens_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_10_051623_create_ordenas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/lugar/2024_10_10_051623_create_ordenas_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_11_093753_create_proveedors_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/inventario/2024_10_11_093753_create_proveedors_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_31_132102_create_menus_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/admin/2024_10_31_132102_create_menus_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_11_01_051336_create_bitacoras_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/admin/2024_11_01_051336_create_bitacoras_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/confirm-password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/auth/confirm-password.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/forgot-password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/auth/forgot-password.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/reset-password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/auth/reset-password.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify-email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/auth/verify-email.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/bitacoras/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/bitacoras/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/chirps/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/chirps/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/clientes/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/caja/clientes/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/clientes/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/clientes/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/empleados/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/empleados/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/empleados/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/empleados/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/empleados/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/empleados/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/espacio/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lugar/espacio/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/menu/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/menu/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/menu/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/menu/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mesas/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lugar/mesas/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mesas/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lugar/mesas/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mesas/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lugar/mesas/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/nota_ventas/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lugar/nota_ventas/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ordenas/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lugar/ordenas/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ordens/show.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/productos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inventario/productos/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/productos/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/productos/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/proveedors/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inventario/proveedors/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/proveedors/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inventario/proveedors/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/proveedors/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inventario/proveedors/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/roles/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/roles/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/roles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsuarioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Lugar/MesaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Lugar/MesaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Admin/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin/Usuario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/admin/2024_10_09_223716_create_empleados_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/admin/2024_10_09_223716_create_empleados_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@esbuild/linux-x64/bin/esbuild" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@esbuild/linux-x64/bin/esbuild" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/esbuild/bin/esbuild" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/esbuild/bin/esbuild" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/laravel-vite-plugin/bin/clean.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/laravel-vite-plugin/bin/clean.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rollup/dist/bin/rollup" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rollup/dist/bin/rollup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vite/bin/vite.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/vite/bin/vite.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/bitacoras/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/bitacoras/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/empleados/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/empleados/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/empleados/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/empleados/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/empleados/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/empleados/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/menu/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/menu/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/menu/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/menu/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/roles/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/caja/clientes/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/caja/clientes/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/caja/clientes/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/caja/clientes/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/caja/clientes/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/caja/clientes/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inventario/productos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inventario/productos/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inventario/productos/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inventario/productos/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inventario/productos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inventario/productos/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inventario/proveedors/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inventario/proveedors/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inventario/proveedors/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inventario/proveedors/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inventario/proveedors/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inventario/proveedors/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lugar/espacio/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lugar/espacio/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lugar/mesas/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lugar/mesas/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lugar/mesas/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lugar/mesas/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lugar/mesas/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lugar/mesas/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lugar/nota_ventas/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lugar/nota_ventas/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lugar/ordenas/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lugar/ordenas/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lugar/ordens/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lugar/ordens/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Auth/AuthenticationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Auth/AuthenticationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Auth/EmailVerificationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Auth/EmailVerificationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Auth/PasswordConfirmationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Auth/PasswordConfirmationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Auth/PasswordResetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Auth/PasswordResetTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Auth/PasswordUpdateTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Auth/PasswordUpdateTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ProfileTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ProfileTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/platform_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/platform_check.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/api/app/Http/Controllers/Auth/RegisteredUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/api/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/api/pest-tests/Feature/Auth/AuthenticationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/api/pest-tests/Feature/Auth/AuthenticationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/api/pest-tests/Feature/Auth/EmailVerificationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/api/pest-tests/Feature/Auth/EmailVerificationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/api/pest-tests/Feature/Auth/PasswordResetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/api/pest-tests/Feature/Auth/PasswordResetTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/api/routes/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/api/routes/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/api/tests/Feature/Auth/AuthenticationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/api/tests/Feature/Auth/AuthenticationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/api/tests/Feature/Auth/EmailVerificationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/api/tests/Feature/Auth/EmailVerificationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/api/tests/Feature/Auth/PasswordResetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/api/tests/Feature/Auth/PasswordResetTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/app/Http/Controllers/Auth/RegisteredUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/app/Http/Requests/ProfileUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/app/Http/Requests/ProfileUpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/pest-tests/Feature/Auth/AuthenticationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/pest-tests/Feature/Auth/AuthenticationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/pest-tests/Feature/Auth/EmailVerificationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/pest-tests/Feature/Auth/EmailVerificationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/pest-tests/Feature/Auth/PasswordConfirmationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/pest-tests/Feature/Auth/PasswordConfirmationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/pest-tests/Feature/Auth/PasswordResetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/pest-tests/Feature/Auth/PasswordResetTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/pest-tests/Feature/Auth/PasswordUpdateTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/pest-tests/Feature/Auth/PasswordUpdateTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/pest-tests/Feature/ProfileTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/pest-tests/Feature/ProfileTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/routes/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/routes/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/tests/Feature/Auth/AuthenticationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/tests/Feature/Auth/AuthenticationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/tests/Feature/Auth/EmailVerificationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/tests/Feature/Auth/EmailVerificationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/tests/Feature/Auth/PasswordConfirmationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/tests/Feature/Auth/PasswordConfirmationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/tests/Feature/Auth/PasswordResetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/tests/Feature/Auth/PasswordResetTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/tests/Feature/Auth/PasswordUpdateTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/tests/Feature/Auth/PasswordUpdateTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/tests/Feature/ProfileTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/default/tests/Feature/ProfileTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/inertia-common/app/Http/Controllers/Auth/RegisteredUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/inertia-common/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/inertia-common/pest-tests/Feature/Auth/PasswordUpdateTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/inertia-common/pest-tests/Feature/Auth/PasswordUpdateTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/inertia-common/pest-tests/Feature/ProfileTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/inertia-common/pest-tests/Feature/ProfileTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/inertia-common/routes/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/inertia-common/routes/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/inertia-common/tests/Feature/Auth/PasswordUpdateTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/inertia-common/tests/Feature/Auth/PasswordUpdateTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/inertia-common/tests/Feature/ProfileTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/inertia-common/tests/Feature/ProfileTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/pest-tests/Feature/Auth/AuthenticationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/pest-tests/Feature/Auth/AuthenticationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/pest-tests/Feature/Auth/EmailVerificationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/pest-tests/Feature/Auth/EmailVerificationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/pest-tests/Feature/Auth/PasswordConfirmationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/pest-tests/Feature/Auth/PasswordConfirmationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/pest-tests/Feature/Auth/PasswordResetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/pest-tests/Feature/Auth/PasswordResetTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/pest-tests/Feature/Auth/PasswordUpdateTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/pest-tests/Feature/Auth/PasswordUpdateTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/pest-tests/Feature/ProfileTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/pest-tests/Feature/ProfileTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/routes/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/routes/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/tests/Feature/Auth/AuthenticationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/tests/Feature/Auth/AuthenticationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/tests/Feature/Auth/EmailVerificationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/tests/Feature/Auth/EmailVerificationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/tests/Feature/Auth/PasswordConfirmationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/tests/Feature/Auth/PasswordConfirmationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/tests/Feature/Auth/PasswordResetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/tests/Feature/Auth/PasswordResetTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/tests/Feature/Auth/PasswordUpdateTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/tests/Feature/Auth/PasswordUpdateTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/tests/Feature/ProfileTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-common/tests/Feature/ProfileTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-functional/resources/views/livewire/pages/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-functional/resources/views/livewire/pages/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-functional/resources/views/livewire/profile/update-profile-information-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire-functional/resources/views/livewire/profile/update-profile-information-form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire/resources/views/livewire/pages/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire/resources/views/livewire/pages/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire/resources/views/livewire/profile/update-profile-information-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/breeze/stubs/livewire/resources/views/livewire/profile/update-profile-information-form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Console/PolicyMakeCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Console/PolicyMakeCommand.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,34 +201,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu/home/l0nkdev/github/si-restaurante&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;F:/github/si-restaurante/resources/views/roles/create.blade.php&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "F:/github/si-restaurante/resources/views/inventario/nota_compras",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "two.files.diff.last.used.file": "F:/github/si-restaurante/resources/views/roles/create.blade.php",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlserver"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\github\si-restaurante\resources\views\espacio" />
-      <recent name="F:\github\si-restaurante\resources\views\bitacoras" />
-      <recent name="F:\github\si-restaurante\resources\views" />
-      <recent name="F:\github\si-restaurante\resources\views\ordenas" />
-      <recent name="F:\github\si-restaurante\resources\views\empleados" />
+      <recent name="F:\github\si-restaurante\resources\views\inventario\nota_compras" />
+      <recent name="F:\github\si-restaurante\resources\views\inventario" />
+      <recent name="F:\github\si-restaurante\resources\views\cocina\contienes" />
+      <recent name="F:\github\si-restaurante\database\migrations\cocina" />
+      <recent name="F:\github\si-restaurante\resources\views\cocina" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\github\si-restaurante\database\migrations\inventario" />
+      <recent name="F:\github\si-restaurante\database\migrations\cocina" />
+      <recent name="F:\github\si-restaurante\database\migrations\caja" />
       <recent name="\\wsl.localhost\Ubuntu\home\l0nkdev\github\si-restaurante\database\migrations\inventario" />
       <recent name="\\wsl.localhost\Ubuntu\home\l0nkdev\github\si-restaurante\database\migrations\lugar" />
-      <recent name="\\wsl.localhost\Ubuntu\home\l0nkdev\github\si-restaurante\database\migrations\caja" />
-      <recent name="\\wsl.localhost\Ubuntu\home\l0nkdev\github\si-restaurante\database\migrations\admin" />
-      <recent name="\\wsl.localhost\Ubuntu\home\l0nkdev\github\si-restaurante\resources\views\inventario" />
     </key>
   </component>
   <component name="RunManager">
@@ -360,8 +245,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.23726.107" />
-        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.23726.107" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PS-241.17890.8" />
+        <option value="bundled-php-predefined-ba97393d7c68-48a1a656d44e-com.jetbrains.php.sharedIndexes-PS-241.17890.8" />
       </set>
     </attachedChunks>
   </component>
@@ -394,6 +279,8 @@
       <workItem from="1730459509658" duration="1689000" />
       <workItem from="1731821389686" duration="3958000" />
       <workItem from="1731825414057" duration="329000" />
+      <workItem from="1731962783267" duration="2604000" />
+      <workItem from="1732215802506" duration="24987000" />
     </task>
     <task id="LOCAL-00001" summary="Roles y Mesa">
       <option name="closed" value="true" />

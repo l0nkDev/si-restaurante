@@ -33,6 +33,9 @@
                                                 </button>
                                             </x-slot>
                                             <x-slot name="content">
+                                                <x-dropdown-link :href="route('nota_compra.create', ['CodProv' => $proveedor->CodProv])">
+                                                    {{ __('Registrar pedido') }}
+                                                </x-dropdown-link>
                                                 <x-dropdown-link :href="route('proveedors.edit', $proveedor)">
                                                     {{ __('Editar') }}
                                                 </x-dropdown-link>
@@ -52,6 +55,10 @@
                     </table>
                     <div style="height: 16px"></div>
                 </div>
+                <a href="{{ route('nota_compra.index') }}">
+                    <x-primary-button class="mt-4"
+                                      style="margin-right: 2px">{{ __('NOTAS DE COMPRA') }}</x-primary-button>
+                </a>
             </div>
         </div>
 

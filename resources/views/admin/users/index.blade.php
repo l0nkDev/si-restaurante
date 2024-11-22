@@ -1,6 +1,6 @@
 <x-app-layout>
-    <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8">
-        <div class="mt-6">
+    <div class="mx-auto p-4 sm:p-6 lg:p-8" style="max-width: 52rem">
+        <div class="mt-7">
             <div style="margin: 20px;">
                 <div class="flex flex-row justify-between">
                     <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Usuarios</h2>

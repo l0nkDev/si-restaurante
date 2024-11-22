@@ -6,6 +6,11 @@ use App\Http\Controllers\{Admin\BitacoraController,
     Admin\RoleController,
     Admin\UsuarioController,
     Caja\ClienteController,
+    Caja\IngresosTotalesController,
+    Cocina\ContieneController,
+    Cocina\IngredienteController,
+    Inventario\NotaCompraController,
+    Inventario\ProdEntranteController,
     Inventario\ProductoController,
     Inventario\ProveedorController,
     Lugar\EspacioController,
@@ -91,6 +96,26 @@ Route::resource('bitacora', BitacoraController::class)
 
 Route::resource('espacio', EspacioController::class)
     ->only(['index'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('ingresos', IngresosTotalesController::class)
+    ->only(['index'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('ingredientes', IngredienteController::class)
+    ->only(['index', 'create', 'store'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('contienes', ContieneController::class)
+    ->only(['create', 'edit', 'store', 'update', 'destroy'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('nota_compra', NotaCompraController::class)
+    ->only(['index', 'create', 'edit', 'store', 'update', 'destroy', 'show'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('producto_entrante', ProdEntranteController::class)
+    ->only(['create', 'edit', 'store', 'update', 'destroy', 'show'])
     ->middleware(['auth', 'verified']);
 
 require __DIR__.'/auth.php';
