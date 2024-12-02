@@ -58,23 +58,19 @@ class SalidaCocinaController extends Controller
         $bitacora->Row = $request->input('NumOrden');
         $bitacora->save();
 
-        foreach (Ordena::All() as $ordena) {
-            if ($ordena->NumOrden == $request->input('NumOrden')) {
-                $salida = new SalidaCocina;
-                $salida->FechaHra = date('Y-m-d H:i:s');
-                $salida->Cantidad = $ordena->Cantidad;
-                $salida->CodProd = $ordena->CodProd;
-                $salida->save();
+        $salida = new SalidaCocina;
+        $salida->FechaHra = date('Y-m-d H:i:s');
+        $salida->NumOrden = $request->input('NumOrden');
+        $salida->save();
 
-                $bitacora = new Bitacora;
-                $bitacora->IP = Bitacora::IP();
-                $bitacora->Username = Auth::user()->name;
-                $bitacora->Action = 'I';
-                $bitacora->Table = 'salida_cocinas';
-                $bitacora->Row = $salida->NroSalida;
-                $bitacora->save();
-            }
-        }
+        $bitacora = new Bitacora;
+        $bitacora->IP = Bitacora::IP();
+        $bitacora->Username = Auth::user()->name;
+        $bitacora->Action = 'I';
+        $bitacora->Table = 'salida_cocinas';
+        $bitacora->Row = $salida->NroSalida;
+        $bitacora->save();
+
         return redirect()->route('salida_cocina.index');
     }
 

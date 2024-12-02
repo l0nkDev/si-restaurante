@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Inventario;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin\Bitacora;
+use App\Models\Inventario\Item;
 use App\Models\Inventario\NotaCompra;
 use App\Models\Inventario\ProdEntrante;
 use Illuminate\Http\RedirectResponse;
@@ -47,6 +48,10 @@ class ProdEntranteController extends Controller
 
         $entrada->save();
 
+        $item = Item::find($request->input('CodItem'));
+        $item->Cantidad += $request->input('Cantidad');
+        $item->save();
+
         $bitacora->Row = "" . $entrada->NroCompra . " (Compra " . $entrada->IdCompra . ")";
         $bitacora->save();
         return redirect()->route('nota_compra.show', NotaCompra::find($entrada->IdCompra));
@@ -89,6 +94,10 @@ class ProdEntranteController extends Controller
         $bitacora->Action = 'D';
         $bitacora->Table = 'prod_entrantes';
         $bitacora->Row = "" . $producto_entrante->NroOrdena . " (Compra " . $producto_entrante->IdCompra . ")";
+
+        $item = Item::find($producto_entrante->CodItem);
+        $item->Cantidad -= $producto_entrante->Cantidad;
+        $item->save();
 
         $producto_entrante->delete();
         $bitacora->save();

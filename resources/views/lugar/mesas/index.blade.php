@@ -86,6 +86,10 @@
                         <x-primary-button class="mt-4"
                                           style="margin-right: 2px">{{ __('VER ESPACIOS') }}</x-primary-button>
                     </a>
+                    <a href="{{ route('nota_ventas.index') }}">
+                        <x-primary-button class="mt-4"
+                                          style="margin-right: 2px">{{ __('VER NOTAS DE VENTA') }}</x-primary-button>
+                    </a>
                 </div>
             </div>
         </div>

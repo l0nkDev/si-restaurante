@@ -14,8 +14,7 @@ return new class extends Migration
         Schema::create('salida_cocinas', function (Blueprint $table) {
             $table->id('NroSalida');
             $table->dateTime('FechaHra');
-            $table->integer('Cantidad');
-            $table->foreignId('CodProd')->references('CodProd')->on('productos');
+            $table->foreignId('NumOrden')->references('NumOrden')->on('ordens');
         });
     }
 

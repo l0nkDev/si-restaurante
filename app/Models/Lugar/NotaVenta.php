@@ -12,6 +12,7 @@ class NotaVenta extends Model
     public $autoincrement = false;
     public $primaryKey = 'IDVenta';
 
+    protected $dates = ['FechaHora'];
     protected $fillable = ['FechaHora', 'Total', 'FuePagado', 'NroMesa', 'IdEmpleado', 'IdCliente'];
     Protected $nullable = ['IdCliente'];
 }

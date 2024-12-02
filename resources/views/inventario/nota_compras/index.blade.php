@@ -2,6 +2,7 @@
     use App\Models\Inventario\Item;
     use App\Models\Inventario\Proveedor;
     use App\Models\Inventario\ProdEntrante;
+    use Carbon\Carbon;
 @endphp
 <x-app-layout>
     <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8">
@@ -26,11 +27,12 @@
                         @foreach($notacompras as $notacompra)
                                     <?php
                                     $proveedor = Proveedor::find($notacompra->CodProv);
+                                    $total += $notacompra->Total;
                                     ?>
                                 <tr>
                                     <td style="flex-grow: 4">{{ $proveedor->Descripcion }}</td>
                                     <td style="flex-grow: 4">{{ $notacompra->Total }}</td>
-                                    <td style="flex-grow: 4">{{ $notacompra->Fecha }}</td>
+                                    <td style="flex-grow: 4">{{ Carbon::parse($notacompra->Fecha)->subHours(4)->format('j M Y, g:i a') }}</td>
                                     <td style="display: flex; justify-content: end">
                                         <form method="GET" action="{{ route('nota_compra.show', $notacompra) }}">
                                             @csrf

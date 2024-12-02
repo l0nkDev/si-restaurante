@@ -5,22 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5d8e2cf-8717-4f4c-984f-70c0b42dad57" name="Changes" comment="Roles y Mesa">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Cocina/ContieneController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Cocina/Contiene.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/cocina/2024_11_18_215016_create_contienes_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/caja/ingresos/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cocina/contienes/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cocina/ingredientes/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cocina/ingredientes/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/inventario/nota_compras/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/inventario/nota_compras/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/inventario/prod_entrantes/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReporteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Inventario/InventarioController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Inventario/NotaSalidaController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Admin/Reporte.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Inventario/NotaSalida.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/reporte/bitacora.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/reporte/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/reporte/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/caja/factura/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/inventario/inventario/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/inventario/nota_salida/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/inventario/nota_salida/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/lugar/nota_ventas/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9c4be7fa-1477-4c98-bf76-8e570edc7ea7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9c4be7fa-1477-4c98-bf76-8e570edc7ea7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9c4be7fa-1477-4c98-bf76-8e570edc7ea7/storage_v2/_src_/database/tucafecotoca.ow8pIQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9c4be7fa-1477-4c98-bf76-8e570edc7ea7/storage_v2/_src_/database/tucafecotoca.ow8pIQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9c4be7fa-1477-4c98-bf76-8e570edc7ea7/storage_v2/_src_/database/tucafecotoca.ow8pIQ/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9c4be7fa-1477-4c98-bf76-8e570edc7ea7/storage_v2/_src_/database/tucafecotoca.ow8pIQ/schema/dbo.sYMBAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/si-restaurante.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/si-restaurante.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsuarioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Cocina/ContieneController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Cocina/ContieneController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Cocina/SalidaCocinaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Cocina/SalidaCocinaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Inventario/NotaCompraController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Inventario/NotaCompraController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Inventario/ProdEntranteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Inventario/ProdEntranteController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Lugar/MesaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Lugar/MesaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Lugar/NotaVentaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Lugar/NotaVentaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Admin/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin/Usuario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Cocina/Contiene.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Cocina/Contiene.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Cocina/SalidaCocina.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Cocina/SalidaCocina.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Inventario/NotaCompra.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Inventario/NotaCompra.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Lugar/NotaVenta.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Lugar/NotaVenta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/admin/2024_10_09_223716_create_empleados_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/admin/2024_10_09_223716_create_empleados_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/cocina/2024_11_18_215016_create_contienes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/cocina/2024_11_18_215016_create_contienes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/cocina/2024_11_21_214948_create_salida_cocinas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/cocina/2024_12_02_214948_create_salida_cocinas_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/inventario/2024_11_22_021810_create_nota_compras_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/inventario/2024_12_02_021810_create_nota_compras_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/inventario/2024_11_22_022217_create_prod_entrantes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/inventario/2024_12_02_022218_create_prod_entrantes_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/@esbuild/linux-x64/bin/esbuild" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@esbuild/linux-x64/bin/esbuild" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/esbuild/bin/esbuild" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/esbuild/bin/esbuild" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/laravel-vite-plugin/bin/clean.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/laravel-vite-plugin/bin/clean.js" afterDir="false" />
@@ -38,6 +65,14 @@
       <change beforePath="$PROJECT_DIR$/resources/views/caja/clientes/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/caja/clientes/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/caja/clientes/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/caja/clientes/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/caja/clientes/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/caja/clientes/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/caja/ingresos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/caja/ingresos/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cocina/contienes/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cocina/contienes/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cocina/ingredientes/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cocina/ingredientes/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cocina/ingredientes/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cocina/ingredientes/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cocina/salida_cocina/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cocina/salida_cocina/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inventario/nota_compras/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inventario/nota_compras/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inventario/nota_compras/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inventario/nota_compras/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inventario/prod_entrantes/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inventario/prod_entrantes/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/inventario/productos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inventario/productos/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/inventario/productos/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inventario/productos/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/inventario/productos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inventario/productos/index.blade.php" afterDir="false" />
@@ -53,8 +88,12 @@
       <change beforePath="$PROJECT_DIR$/resources/views/lugar/ordenas/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lugar/ordenas/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/lugar/ordens/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lugar/ordens/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +103,13 @@
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -188,6 +234,12 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
       <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -205,7 +257,8 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "F:/github/si-restaurante/resources/views/cocina",
+    "last_opened_file_path": "F:/github/si-restaurante/resources/views/admin/reporte",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -222,18 +275,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\github\si-restaurante\resources\views\cocina" />
-      <recent name="F:\github\si-restaurante\resources\views\inventario\nota_compras" />
+      <recent name="F:\github\si-restaurante\resources\views\admin\reporte" />
+      <recent name="F:\github\si-restaurante\resources\views\inventario\nota_salida" />
       <recent name="F:\github\si-restaurante\resources\views\inventario" />
-      <recent name="F:\github\si-restaurante\resources\views\cocina\contienes" />
-      <recent name="F:\github\si-restaurante\database\migrations\cocina" />
+      <recent name="F:\github\si-restaurante\resources\views\caja\factura" />
+      <recent name="F:\github\si-restaurante\resources\views\lugar\nota_ventas" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\github\si-restaurante\database\migrations\admin" />
       <recent name="F:\github\si-restaurante\database\migrations\inventario" />
-      <recent name="F:\github\si-restaurante\database\migrations\cocina" />
       <recent name="F:\github\si-restaurante\database\migrations\caja" />
+      <recent name="F:\github\si-restaurante\database\migrations\cocina" />
       <recent name="\\wsl.localhost\Ubuntu\home\l0nkdev\github\si-restaurante\database\migrations\inventario" />
-      <recent name="\\wsl.localhost\Ubuntu\home\l0nkdev\github\si-restaurante\database\migrations\lugar" />
     </key>
   </component>
   <component name="RunManager">
@@ -281,6 +334,7 @@
       <workItem from="1731825414057" duration="329000" />
       <workItem from="1731962783267" duration="2604000" />
       <workItem from="1732215802506" duration="30679000" />
+      <workItem from="1733108162609" duration="26898000" />
     </task>
     <task id="LOCAL-00001" summary="Roles y Mesa">
       <option name="closed" value="true" />

@@ -15,9 +15,9 @@ class NotaVentaController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): View
     {
-        //
+        return view('lugar.nota_ventas.index', ["notaventas" => NotaVenta::all()]);
     }
 
     /**

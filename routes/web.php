@@ -3,14 +3,19 @@
 use App\Http\Controllers\{Admin\BitacoraController,
     Admin\EmpleadoController,
     Admin\MenuController,
+    Admin\ReporteController,
     Admin\RoleController,
     Admin\UsuarioController,
     Caja\ClienteController,
+    Caja\FacturaController,
     Caja\IngresosTotalesController,
     Cocina\ContieneController,
     Cocina\IngredienteController,
     Cocina\SalidaCocinaController,
+    Inventario\InventarioController,
+    Inventario\ItemController,
     Inventario\NotaCompraController,
+    Inventario\NotaSalidaController,
     Inventario\ProdEntranteController,
     Inventario\ProductoController,
     Inventario\ProveedorController,
@@ -121,6 +126,26 @@ Route::resource('producto_entrante', ProdEntranteController::class)
 
 Route::resource('salida_cocina', SalidaCocinaController::class)
     ->only(['index', 'store', 'create'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('factura', FacturaController::class)
+    ->only(['show', 'store'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('inventario', InventarioController::class)
+    ->only(['index'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('item', ItemController::class)
+    ->only(['edit'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('nota_salida', NotaSalidaController::class)
+    ->only(['index', 'show', 'create', 'store', 'destroy'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('reporte', ReporteController::class)
+    ->only(['index', 'show', 'create', 'store'])
     ->middleware(['auth', 'verified']);
 
 require __DIR__.'/auth.php';

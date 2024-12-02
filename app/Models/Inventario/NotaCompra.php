@@ -12,4 +12,5 @@ class NotaCompra extends Model
     public $primaryKey = 'IdCompra';
 
     protected $fillable = ['Fecha', 'Total', 'CodProv'];
+    protected $dates = ['Fecha'];
 }

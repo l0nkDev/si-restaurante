@@ -66,6 +66,10 @@
                         <x-primary-button class="mt-4"
                                           style="margin-right: 2px">{{ __('VER BITÁCORA') }}</x-primary-button>
                     </a>
+                    <a href="{{ route('reporte.index') }}">
+                        <x-primary-button class="mt-4"
+                                          style="margin-right: 2px">{{ __('VER REPORTES') }}</x-primary-button>
+                    </a>
                 </div>
             </div>
         </div>

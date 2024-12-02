@@ -1,3 +1,4 @@
+@php use App\Models\Inventario\Item;use App\Models\Inventario\ProdEntrante; @endphp
 <x-app-layout>
     <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8">
         <div class="mt-6">
@@ -9,10 +10,6 @@
                         <x-primary-button class="mt-4"
                                           style="margin-right: 2px">{{ __('NUEVO PRODUCTO') }}</x-primary-button>
                     </form>
-                    <a href="{{ route('proveedors.index') }}">
-                        <x-primary-button class="mt-4"
-                                          style="margin-right: 2px">{{ __('PROVEEDORES') }}</x-primary-button>
-                    </a>
                 </div>
                 <div class="mt-6 bg-white rounded-lg divide-y">
                     <div style="height: 16px"></div>
@@ -20,16 +17,21 @@
                         <thead>
                         <th scope="col" align="left">Nombre</th>
                         <th scope="col" align="left">Precio</th>
+                        <th scope="col" align="left">Costo</th>
                         <th scope="col" align="left">Cantidad</th>
                         <th scope="col" align="left">Disponible</th>
                         <th scope="col" align="left"></th>
                         </thead>
                         <tbody>
                         @foreach($productos as $producto)
-                                <?php $item = \App\Models\Inventario\Item::find($producto->CodProd) ?>
+                            @php
+                                $item = Item::find($producto->CodProd);
+                                $pr_ent = ProdEntrante::where("CodItem", "=", $producto->CodProd)->OrderBy('NroCompra', "Desc")->first();
+                            @endphp
                             <tr>
                                 <td style="flex-grow: 4">{{ $item->Nombre }}</td>
-                                <td style="flex-grow: 4">{{ $producto->Precio }}</td>
+                                <td style="flex-grow: 4">{{ number_format($producto->Precio, 2) }}</td>
+                                <td style="flex-grow: 4">{{ is_null($pr_ent) ? "---" : $pr_ent->Costo }}</td>
                                 <td style="flex-grow: 4">{{ is_null($item->Cantidad) ? "---" : $item->Cantidad }}</td>
                                 <td style="flex-grow: 4">{{ $item->Disponible == 1 ? 'Si' : 'No' }}</td>
                                 <td style="display: flex; justify-content: end">

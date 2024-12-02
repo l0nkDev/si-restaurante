@@ -28,7 +28,7 @@ class NotaCompraController extends Controller
     {
         $notacompra = new NotaCompra;
         $notacompra->CodProv = $request->input('CodProv');
-        $notacompra->Fecha = date('Y-m-d');
+        $notacompra->FechaHra = date('Y-m-d');
         $notacompra->Total = 0;
         $notacompra->save();
 

@@ -11,5 +11,5 @@ class SalidaCocina extends Model
     public $timestamps = false;
     public $primaryKey = 'NroSalida';
 
-    protected $fillable = ['FechaHra', 'Cantidad', 'CodProd'];
+    protected $fillable = ['FechaHra'];
 }

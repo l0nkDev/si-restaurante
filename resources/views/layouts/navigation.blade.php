@@ -14,7 +14,7 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                         @if($rol == 2)
-                            <x-nav-link :href="route('productos.index')" :active="request()->routeIs('productos.index')">
+                            <x-nav-link :href="route('inventario.index')" :active="request()->routeIs('inventario.index')">
                                 {{ __('Inventario') }}
                             </x-nav-link>
                         @endif
@@ -91,7 +91,7 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             @if($rol == 2)
-            <x-responsive-nav-link :href="route('productos.index')" :active="request()->routeIs('productos.index')">
+            <x-responsive-nav-link :href="route('inventario.index')" :active="request()->routeIs('inventario.index')">
                 {{ __('Inventario') }}
             </x-responsive-nav-link>
             @endif
